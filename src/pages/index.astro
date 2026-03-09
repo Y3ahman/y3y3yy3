@@ -1,100 +1,201 @@
 ---
+// ============================================================
+// FRONTMATTER (runs on the server — imports go here, NOT below)
+// ============================================================
+// Import your Layout component so this page has a proper HTML
+// shell (<!doctype html>, <head>, <body>, etc.).
 import Layout from '../layouts/Layout.astro';
 ---
 
+<!--
+  ┌─────────────────────────────────────────────────────┐
+  │  HOW ASTRO PAGE STRUCTURE WORKS                     │
+  │                                                     │
+  │  <Layout>          ← opens the HTML wrapper         │
+  │    (your content goes INSIDE here)                  │
+  │  </Layout>         ← closes the HTML wrapper        │
+  │                                                     │
+  │  Anything placed OUTSIDE <Layout> won't appear      │
+  │  inside the <body> — that's why your <h1> was       │
+  │  invisible before. Always nest your content here.   │
+  └─────────────────────────────────────────────────────┘
+-->
 <Layout>
-<main class="max-w-3xl mx-auto px-6 py-20">
-<!-- Hero Section -->
-<section class="mb-24">
-<p class="text-sm font-medium tracking-widest text-slate-400 uppercase mb-6">Portfolio</p>
-<h1 class="text-5xl sm:text-6xl font-semibold tracking-tight text-slate-900 mb-6">
-Hi, I'm Y3ahman.
-</h1>
-<p class="text-xl text-slate-500 leading-relaxed max-w-xl">
-I build clean, thoughtful digital experiences. Focused on simplicity, performance, and
-purposeful design.
-</p>
-<div class="mt-10 flex items-center gap-4">
-<a
-href="mailto:hello@y3ahman.dev"
-class="inline-block bg-slate-900 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-slate-700 transition-colors"
->
-Get in touch
-</a>
-<a
-href="https://github.com/Y3ahman"
-target="_blank"
-rel="noopener noreferrer"
-class="inline-block text-slate-500 text-sm font-medium px-5 py-2.5 rounded-full border border-slate-200 hover:border-slate-300 hover:text-slate-700 transition-colors"
->
-GitHub
-</a>
-</div>
-</section>
+  <!--
+    CENTERED CONTAINER
+    • max-w-3xl  → caps the width so text doesn't stretch too wide
+    • mx-auto    → centers the container horizontally
+    • px-6       → comfortable horizontal padding on mobile
+    • pt-32      → large top padding creates that "breathing room" feel
+    • pb-16      → generous bottom padding before the page ends
+    Add all your page sections inside this <main> tag.
+  -->
+  <main class="max-w-3xl mx-auto px-6 pt-32 pb-16">
 
-<!-- Projects Section -->
-<section>
-<h2 class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-8">Projects</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<!-- Project Card 1 (placeholder) -->
-<div
-class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
->
-<div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
-<h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
-Coming Soon
-</h3>
-<p class="text-sm text-slate-500 leading-relaxed">
-Something is being crafted here. Check back soon.
-</p>
-</div>
+    <!-- ══════════════════════════════════════════════
+         HERO SECTION
+         This is the first thing visitors see.
+         Keep it minimal: a label, a big heading,
+         a one-liner, and optional CTA buttons.
+    ═══════════════════════════════════════════════ -->
+    <section class="mb-24">
 
-<!-- Project Card 2 (placeholder) -->
-<div
-class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
->
-<div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
-<h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
-Coming Soon
-</h3>
-<p class="text-sm text-slate-500 leading-relaxed">
-Another project in progress. Stay tuned.
-</p>
-</div>
+      <!-- Small all-caps label above the heading -->
+      <p class="text-sm font-medium tracking-widest text-slate-400 uppercase mb-6">
+        Portfolio
+      </p>
 
-<!-- Project Card 3 (placeholder) -->
-<div
-class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
->
-<div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
-<h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
-Coming Soon
-</h3>
-<p class="text-sm text-slate-500 leading-relaxed">
-More work on the way. Good things take time.
-</p>
-</div>
+      <!--
+        MAIN HEADING
+        • text-5xl / sm:text-6xl → large on mobile, even larger on tablet+
+        • font-semibold           → slightly bolder than regular, lighter than bold
+        • tracking-tight          → tightens letter-spacing for a refined look
+        • text-slate-900          → near-black; use this for all primary headings
+        • (font-sans is inherited from the <body> in Layout.astro)
+        Edit this line to change your name / tagline.
+      -->
+      <h1 class="text-5xl sm:text-6xl font-semibold tracking-tight text-slate-900 mb-6">
+        Hi, I'm Y3ahman.
+      </h1>
 
-<!-- Project Card 4 (placeholder) -->
-<div
-class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
->
-<div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
-<h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
-Coming Soon
-</h3>
-<p class="text-sm text-slate-500 leading-relaxed">
-Exciting projects are in the pipeline.
-</p>
-</div>
-</div>
-</section>
+      <!--
+        SUBTITLE / BIO
+        • text-xl        → comfortable reading size for a short blurb
+        • text-slate-500 → mid-grey; use this for all supporting body text
+        • max-w-xl       → keeps the line length readable (not full-width)
+        Edit this paragraph to describe what you do.
+      -->
+      <p class="text-xl text-slate-500 leading-relaxed max-w-xl">
+        I build clean, thoughtful digital experiences. Focused on simplicity,
+        performance, and purposeful design.
+      </p>
 
-<!-- Footer -->
-<footer class="mt-24 pt-8 border-t border-slate-100">
-<p class="text-sm text-slate-400">
-&copy; {new Date().getFullYear()} Y3ahman. Built with Astro.
-</p>
-</footer>
-</main>
+      <!--
+        CTA BUTTONS
+        Two link styles: a solid pill and an outlined pill.
+        Add more <a> tags here if you need extra links.
+      -->
+      <div class="mt-10 flex items-center gap-4">
+        <!-- Primary CTA — solid dark pill -->
+        <a
+          href="mailto:hello@y3ahman.dev"
+          class="inline-block bg-slate-900 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-slate-700 transition-colors"
+        >
+          Get in touch
+        </a>
+
+        <!-- Secondary CTA — outlined pill -->
+        <a
+          href="https://github.com/Y3ahman"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block text-slate-500 text-sm font-medium px-5 py-2.5 rounded-full border border-slate-200 hover:border-slate-300 hover:text-slate-700 transition-colors"
+        >
+          GitHub
+        </a>
+      </div>
+    </section>
+    <!-- END HERO SECTION -->
+
+    <!-- ══════════════════════════════════════════════
+         PROJECTS SECTION
+         A 2-column card grid. Each card is a
+         placeholder — replace the content inside
+         each card <div> with your real project info.
+         To add more cards, duplicate a card block.
+         To remove a card, delete the entire block.
+    ═══════════════════════════════════════════════ -->
+    <section>
+
+      <!-- Section label — same style as the hero label -->
+      <h2 class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-8">
+        Projects
+      </h2>
+
+      <!--
+        CARD GRID
+        • grid-cols-1 sm:grid-cols-2 → single column on mobile, 2 on tablet+
+        • gap-4                       → space between cards
+      -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <!--
+          PROJECT CARD
+          • bg-white           → pure white card surface
+          • border border-slate-100 → very subtle 1px border
+          • rounded-3xl        → Apple-style large corner radius
+          • p-6                → internal breathing room
+          • shadow-sm          → barely-there resting shadow
+          • hover:shadow-md    → slightly deeper shadow on hover
+          • transition-shadow  → smooth shadow animation
+          Duplicate this entire block to add a new project card.
+        -->
+        <!-- Card 1 ─────────────────────────────────── -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <!-- Icon placeholder — swap with an <img> or SVG icon -->
+          <div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
+          <!-- Project title -->
+          <h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
+            Coming Soon
+          </h3>
+          <!-- Short project description -->
+          <p class="text-sm text-slate-500 leading-relaxed">
+            Something is being crafted here. Check back soon.
+          </p>
+        </div>
+
+        <!-- Card 2 ─────────────────────────────────── -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
+          <h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
+            Coming Soon
+          </h3>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            Another project in progress. Stay tuned.
+          </p>
+        </div>
+
+        <!-- Card 3 ─────────────────────────────────── -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
+          <h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
+            Coming Soon
+          </h3>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            More work on the way. Good things take time.
+          </p>
+        </div>
+
+        <!-- Card 4 ─────────────────────────────────── -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
+          <h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
+            Coming Soon
+          </h3>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            Exciting projects are in the pipeline.
+          </p>
+        </div>
+
+      </div>
+      <!-- END CARD GRID -->
+    </section>
+    <!-- END PROJECTS SECTION -->
+
+    <!-- ══════════════════════════════════════════════
+         FOOTER
+         Sits at the bottom of the page content.
+         Add social links or extra info here.
+    ═══════════════════════════════════════════════ -->
+    <footer class="mt-24 pt-8 border-t border-slate-100">
+      <p class="text-sm text-slate-400">
+        &copy; {new Date().getFullYear()} Y3ahman. Built with Astro.
+      </p>
+    </footer>
+    <!-- END FOOTER -->
+
+  </main>
+  <!-- END CENTERED CONTAINER — nothing should go below this line inside <Layout> -->
+
 </Layout>
+<!-- END LAYOUT — nothing should go below this line in the file -->
