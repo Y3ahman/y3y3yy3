@@ -1,11 +1,100 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+<main class="max-w-3xl mx-auto px-6 py-20">
+<!-- Hero Section -->
+<section class="mb-24">
+<p class="text-sm font-medium tracking-widest text-slate-400 uppercase mb-6">Portfolio</p>
+<h1 class="text-5xl sm:text-6xl font-semibold tracking-tight text-slate-900 mb-6">
+Hi, I'm Y3ahman.
+</h1>
+<p class="text-xl text-slate-500 leading-relaxed max-w-xl">
+I build clean, thoughtful digital experiences. Focused on simplicity, performance, and
+purposeful design.
+</p>
+<div class="mt-10 flex items-center gap-4">
+<a
+href="mailto:hello@y3ahman.dev"
+class="inline-block bg-slate-900 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-slate-700 transition-colors"
+>
+Get in touch
+</a>
+<a
+href="https://github.com/Y3ahman"
+target="_blank"
+rel="noopener noreferrer"
+class="inline-block text-slate-500 text-sm font-medium px-5 py-2.5 rounded-full border border-slate-200 hover:border-slate-300 hover:text-slate-700 transition-colors"
+>
+GitHub
+</a>
+</div>
+</section>
+
+<!-- Projects Section -->
+<section>
+<h2 class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-8">Projects</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Project Card 1 (placeholder) -->
+<div
+class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+>
+<div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
+<h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
+Coming Soon
+</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+Something is being crafted here. Check back soon.
+</p>
+</div>
+
+<!-- Project Card 2 (placeholder) -->
+<div
+class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+>
+<div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
+<h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
+Coming Soon
+</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+Another project in progress. Stay tuned.
+</p>
+</div>
+
+<!-- Project Card 3 (placeholder) -->
+<div
+class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+>
+<div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
+<h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
+Coming Soon
+</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+More work on the way. Good things take time.
+</p>
+</div>
+
+<!-- Project Card 4 (placeholder) -->
+<div
+class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+>
+<div class="w-8 h-8 rounded-lg bg-slate-100 mb-4"></div>
+<h3 class="text-base font-semibold tracking-tight text-slate-900 mb-1">
+Coming Soon
+</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+Exciting projects are in the pipeline.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-24 pt-8 border-t border-slate-100">
+<p class="text-sm text-slate-400">
+&copy; {new Date().getFullYear()} Y3ahman. Built with Astro.
+</p>
+</footer>
+</main>
 </Layout>
