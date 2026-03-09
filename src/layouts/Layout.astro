@@ -5,14 +5,56 @@ import '../styles/global.css';
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" href="/favicon.ico" />
-<meta name="generator" content={Astro.generator} />
-<title>Y3ahman</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  FAVICON — HOW TO CHANGE YOUR SITE ICON                    ║
+    ╠══════════════════════════════════════════════════════════════╣
+    ║                                                              ║
+    ║  The two <link> tags below control the browser-tab icon.    ║
+    ║  Both icon files live in the /public folder.                 ║
+    ║                                                              ║
+    ║  QUICK SWAP (SVG — recommended, scales to any size)          ║
+    ║  ───────────────────────────────────────────────────────     ║
+    ║  1. Open public/favicon.svg in any text/SVG editor.          ║
+    ║  2. Replace its contents with your own SVG artwork.          ║
+    ║  3. Save — that's it. No code changes needed here.           ║
+    ║                                                              ║
+    ║  USING A PNG OR ICO INSTEAD                                  ║
+    ║  ───────────────────────────────────────────────────────     ║
+    ║  1. Drop your image into /public  (e.g. favicon.png).        ║
+    ║  2. Update the href below and set the correct type:          ║
+    ║       <link rel="icon" type="image/png" href="/favicon.png"/>║
+    ║  3. Delete or keep public/favicon.svg as you prefer.         ║
+    ║                                                              ║
+    ║  FULL ICON SET (for production / PWA)                        ║
+    ║  ───────────────────────────────────────────────────────     ║
+    ║  Use https://realfavicongenerator.net/ or                    ║
+    ║  https://favicon.io/ to generate every size you need.        ║
+    ║  Copy the generated files into /public and replace these     ║
+    ║  <link> tags with the ones the tool gives you.               ║
+    ║                                                              ║
+    ║  iOS HOME-SCREEN ICON                                        ║
+    ║  ───────────────────────────────────────────────────────     ║
+    ║  Add a 180×180 PNG named apple-touch-icon.png to /public,    ║
+    ║  then uncomment the line below:                              ║
+    ║    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>║
+    ╚══════════════════════════════════════════════════════════════╝
+  -->
+
+  <!-- Primary favicon (SVG — modern browsers, any resolution) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- Fallback favicon (ICO — older browsers) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <!-- Uncomment the line below once you add apple-touch-icon.png to /public -->
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+
+  <meta name="generator" content={Astro.generator} />
+  <title>Y3ahman</title>
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
-<slot />
+  <slot />
 </body>
 </html>
