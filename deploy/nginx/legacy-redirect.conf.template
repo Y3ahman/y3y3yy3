@@ -12,6 +12,7 @@ server {
 
     ssl_certificate /etc/letsencrypt/live/old-example.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/old-example.com/privkey.pem;
+    ssl_protocols TLSv1.3;
 
     return 301 https://example.com$request_uri;
 }
