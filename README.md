@@ -49,7 +49,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 For domain migration, DNS setup, Nginx templates, HTTPS, and redirect checklist, see:
 
-- `/home/runner/work/y3y3yy3/y3y3yy3/deploy/DOMAIN_MIGRATION.md`
-- `/home/runner/work/y3y3yy3/y3y3yy3/deploy/nginx/site.conf.template`
-- `/home/runner/work/y3y3yy3/y3y3yy3/deploy/nginx/site-https.conf.template`
-- `/home/runner/work/y3y3yy3/y3y3yy3/deploy/nginx/legacy-redirect.conf.template`
+- `deploy/DOMAIN_MIGRATION.md`
+- `deploy/nginx/site.conf.template`
+- `deploy/nginx/site-https.conf.template`
+- `deploy/nginx/legacy-redirect.conf.template`
